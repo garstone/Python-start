@@ -1,0 +1,12 @@
+﻿<!doctype html>
+<title>Sentimental analysis Demo</title>
+<form action="{{ url_for('index_page') }}" method=post>
+    <dl>
+        <dt>Введите пример отзыва:<br>
+        <dd><textarea name=text rows=20 cols=100>{{ text }}</textarea>
+        <dd><input type=submit value="Анализировать">
+    </dl>
+</form>
+
+<br>Тональность:<br>
+{{ prediction_message }}
